@@ -1,0 +1,18 @@
+{
+  "kind": "singleType",
+  "collectionName": "request_forms",
+  "info": {
+    "singularName": "request-form",
+    "pluralName": "request-forms",
+    "displayName": "Request Form"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "YouFormLink": {
+      "type": "string"
+    }
+  }
+}

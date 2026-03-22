@@ -1,0 +1,22 @@
+{
+  "kind": "singleType",
+  "collectionName": "partner_banners",
+  "info": {
+    "singularName": "partner-banner",
+    "pluralName": "partner-banners",
+    "displayName": "Partner Banner"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "partnerLogo": {
+      "type": "media",
+      "multiple": true,
+      "allowedTypes": [
+        "images"
+      ]
+    }
+  }
+}

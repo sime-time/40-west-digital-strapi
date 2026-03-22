@@ -1,0 +1,23 @@
+{
+  "collectionName": "components_shared_portfolio_videos",
+  "info": {
+    "displayName": "Portfolio Video"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "thumbnail": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "youtubeLink": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}

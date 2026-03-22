@@ -1,0 +1,23 @@
+{
+  "collectionName": "components_shared_social_media_links",
+  "info": {
+    "displayName": "Social Media Link"
+  },
+  "options": {},
+  "attributes": {
+    "logoType": {
+      "type": "enumeration",
+      "enum": [
+        "instagram",
+        "facebook",
+        "youtube",
+        "tiktok",
+        "twitter"
+      ]
+    },
+    "profileLink": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}
