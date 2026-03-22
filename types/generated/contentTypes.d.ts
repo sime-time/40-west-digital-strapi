@@ -473,6 +473,7 @@ export interface ApiCallToActionCallToAction extends Struct.SingleTypeSchema {
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
     description: Schema.Attribute.Text;
+    heading: Schema.Attribute.String;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
@@ -480,8 +481,7 @@ export interface ApiCallToActionCallToAction extends Struct.SingleTypeSchema {
     > &
       Schema.Attribute.Private;
     publishedAt: Schema.Attribute.DateTime;
-    subtitle: Schema.Attribute.String;
-    title: Schema.Attribute.String;
+    subheading: Schema.Attribute.String;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -576,12 +576,12 @@ export interface ApiHeaderHeader extends Struct.SingleTypeSchema {
   };
 }
 
-export interface ApiMainMain extends Struct.SingleTypeSchema {
-  collectionName: 'mains';
+export interface ApiHeroHero extends Struct.SingleTypeSchema {
+  collectionName: 'heroes';
   info: {
-    displayName: 'Main';
-    pluralName: 'mains';
-    singularName: 'main';
+    displayName: 'Hero';
+    pluralName: 'heroes';
+    singularName: 'hero';
   };
   options: {
     draftAndPublish: true;
@@ -590,17 +590,18 @@ export interface ApiMainMain extends Struct.SingleTypeSchema {
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
+    description: Schema.Attribute.Text;
+    heading: Schema.Attribute.String;
+    headingEmphasis: Schema.Attribute.String;
     image1: Schema.Attribute.Media<'images'>;
     image2: Schema.Attribute.Media<'images'>;
     image3: Schema.Attribute.Media<'images'>;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
-    localizations: Schema.Attribute.Relation<'oneToMany', 'api::main.main'> &
+    localizations: Schema.Attribute.Relation<'oneToMany', 'api::hero.hero'> &
       Schema.Attribute.Private;
     primaryButtonLink: Schema.Attribute.Component<'shared.link', false>;
     publishedAt: Schema.Attribute.DateTime;
     secondaryButtonLink: Schema.Attribute.Component<'shared.link', false>;
-    title: Schema.Attribute.String;
-    titleEmphasis: Schema.Attribute.String;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -623,6 +624,7 @@ export interface ApiMissionMission extends Struct.SingleTypeSchema {
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
     description: Schema.Attribute.Text;
+    heading: Schema.Attribute.String;
     image: Schema.Attribute.Media<'images'>;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
@@ -631,8 +633,7 @@ export interface ApiMissionMission extends Struct.SingleTypeSchema {
     > &
       Schema.Attribute.Private;
     publishedAt: Schema.Attribute.DateTime;
-    subtitle: Schema.Attribute.String;
-    title: Schema.Attribute.String;
+    subheading: Schema.Attribute.String;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -681,6 +682,7 @@ export interface ApiPortfolioPortfolio extends Struct.SingleTypeSchema {
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
+    heading: Schema.Attribute.String;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
@@ -689,7 +691,6 @@ export interface ApiPortfolioPortfolio extends Struct.SingleTypeSchema {
       Schema.Attribute.Private;
     portfolioVideo: Schema.Attribute.Component<'shared.portfolio-video', true>;
     publishedAt: Schema.Attribute.DateTime;
-    title: Schema.Attribute.String;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -1240,7 +1241,7 @@ declare module '@strapi/strapi' {
       'api::footer.footer': ApiFooterFooter;
       'api::global.global': ApiGlobalGlobal;
       'api::header.header': ApiHeaderHeader;
-      'api::main.main': ApiMainMain;
+      'api::hero.hero': ApiHeroHero;
       'api::mission.mission': ApiMissionMission;
       'api::partner-banner.partner-banner': ApiPartnerBannerPartnerBanner;
       'api::portfolio.portfolio': ApiPortfolioPortfolio;
