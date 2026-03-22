@@ -660,7 +660,7 @@ export interface ApiPartnerBannerPartnerBanner extends Struct.SingleTypeSchema {
       'api::partner-banner.partner-banner'
     > &
       Schema.Attribute.Private;
-    partnerLogo: Schema.Attribute.Media<'images', true>;
+    partnerLogos: Schema.Attribute.Media<'images', true>;
     publishedAt: Schema.Attribute.DateTime;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
