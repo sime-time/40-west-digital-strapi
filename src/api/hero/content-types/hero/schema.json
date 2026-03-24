@@ -17,15 +17,7 @@
     "headingEmphasis": {
       "type": "string"
     },
-    "description": {
-      "type": "text"
-    },
     "primaryButtonLink": {
-      "type": "component",
-      "component": "shared.link",
-      "repeatable": false
-    },
-    "secondaryButtonLink": {
       "type": "component",
       "component": "shared.link",
       "repeatable": false

@@ -567,7 +567,7 @@ export interface ApiHeaderHeader extends Struct.SingleTypeSchema {
       'api::header.header'
     > &
       Schema.Attribute.Private;
-    logo: Schema.Attribute.Component<'shared.logo-link', false>;
+    logo: Schema.Attribute.Media<'images'>;
     navigationLinks: Schema.Attribute.Component<'shared.link', true>;
     publishedAt: Schema.Attribute.DateTime;
     updatedAt: Schema.Attribute.DateTime;
@@ -590,7 +590,6 @@ export interface ApiHeroHero extends Struct.SingleTypeSchema {
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    description: Schema.Attribute.Text;
     heading: Schema.Attribute.String;
     headingEmphasis: Schema.Attribute.String;
     image1: Schema.Attribute.Media<'images'>;
@@ -601,7 +600,6 @@ export interface ApiHeroHero extends Struct.SingleTypeSchema {
       Schema.Attribute.Private;
     primaryButtonLink: Schema.Attribute.Component<'shared.link', false>;
     publishedAt: Schema.Attribute.DateTime;
-    secondaryButtonLink: Schema.Attribute.Component<'shared.link', false>;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;

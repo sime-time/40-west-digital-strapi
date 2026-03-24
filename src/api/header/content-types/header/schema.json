@@ -12,9 +12,11 @@
   "pluginOptions": {},
   "attributes": {
     "logo": {
-      "type": "component",
-      "component": "shared.logo-link",
-      "repeatable": false
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images"
+      ]
     },
     "navigationLinks": {
       "type": "component",
